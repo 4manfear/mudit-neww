@@ -1,0 +1,48 @@
+*{
+    font-family: "Poppins", serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+.navbarr{
+  height: 15vh;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: black;
+}
+.mudit-logo{
+    color: red;
+    font-size: 50PX;
+}
+.side-logo{
+  
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30PX;
+    height: 15vh;
+}
+.linkss{
+    width: 40%;
+    height: 15vh;
+    
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.logo-t{
+font-size: 20px;
+color: white;
+}
+.link{
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+}

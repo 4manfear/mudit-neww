@@ -1,0 +1,197 @@
+/* Prevent Horizontal Overflow */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* General Styling */
+.project_info {
+    width: 100%;
+    padding: 60px 20px;
+    color: white;
+    background-color: #111;
+    font-family: 'Arial', sans-serif;
+
+    /* Popup Animation */
+    animation: fadeInScale 0.8s ease-out;
+}
+
+/* Fade-In Scale Animation */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Title Styling */
+.project-title {
+    text-align: left;
+    font-size: 2rem;
+    color: #ffcc00;
+    margin-bottom: 15px;
+}
+
+/* Role and Project Info */
+.project_starter_info {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 8px;
+    margin-bottom: 20px;
+
+    /* Slide In */
+    animation: slideIn 1s ease-out;
+}
+
+/* Slide-In Animation */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project_starter_info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #ffcc00;
+}
+
+/* Section Styling */
+.small_information, .detail_information {
+    background-color: #252525;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    text-align: left;
+    box-sizing: border-box;
+
+    /* Fade-in */
+    animation: fadeIn 0.7s ease-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Headings */
+h4 {
+    font-size: 1.4rem;
+    color: #ffcc00;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* Feature List with Staggered Animation */
+.detail_information ul {
+    list-style: none;
+    padding: 0;
+}
+
+.detail_information li {
+    background-color: #333;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    line-height: 1.5;
+    text-align: left;
+
+    /* Staggered Fade-in */
+    opacity: 0;
+    animation: fadeInList 0.6s ease-out forwards;
+}
+
+/* Delay Each List Item */
+.detail_information li:nth-child(1) { animation-delay: 0.2s; }
+.detail_information li:nth-child(2) { animation-delay: 0.4s; }
+.detail_information li:nth-child(3) { animation-delay: 0.6s; }
+.detail_information li:nth-child(4) { animation-delay: 0.8s; }
+.detail_information li:nth-child(5) { animation-delay: 1s; }
+
+/* Fade-in List Items */
+@keyframes fadeInList {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.detail_information li strong {
+    color: #ffcc00;
+}
+
+/* Video Section with Popup Animation */
+.video_container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    
+    /* Slide-Up Animation */
+    opacity: 0;
+    animation: slideUp 0.8s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+/* Slide-Up Animation */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.video_frame {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Responsive Fix */
+@media screen and (max-width: 1200px) {
+    .project_info {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .project_starter_info {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .project_starter_info h3 {
+        margin-bottom: 5px;
+    }
+}

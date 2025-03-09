@@ -1,0 +1,124 @@
+/* Main container */
+.skills {
+  padding: 60px 20px;
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+}
+
+/* Title */
+.skills h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Layout for content */
+.skills-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  flex-direction: column; /* Ensures vertical layout by default */
+}
+
+/* Skills info & about me sections */
+.skills-info, 
+.about-me {
+  max-width: 500px;
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: left;
+
+  /* Popup animation */
+  opacity: 0;
+  transform: scale(0.8);
+  animation: popup 0.5s ease-out forwards;
+}
+
+/* Delays for smooth cascading effect */
+.skills-info { animation-delay: 0.1s; }
+.about-me { animation-delay: 0.2s; }
+
+/* Ensure order on large screens */
+@media (min-width: 769px) {
+  .skills-content {
+    flex-direction: row; /* Side-by-side on larger screens */
+  }
+
+  .skills-info {
+    order: 1; /* Skills on top */
+  }
+
+  .about-me {
+    order: 2; /* About me below */
+  }
+}
+
+/* Skill groups */
+.skill-group {
+  margin-bottom: 20px;
+}
+
+.skill-group h3,
+.about-me h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #fbc02d;
+}
+
+/* List styling */
+.skill-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-group li {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  padding-left: 1em;
+  position: relative;
+}
+
+.skill-group li::before {
+  content: '•';
+  color: #fbc02d;
+  position: absolute;
+  left: 0;
+}
+
+/* Paragraph styling */
+.about-me p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Popup animation */
+@keyframes popup {
+  0% {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skills-content {
+    flex-direction: column; /* Stack on smaller screens */
+  }
+
+  /* Ensure proper order */
+  .skills-info {
+    order: 1;
+  }
+
+  .about-me {
+    order: 2;
+  }
+}

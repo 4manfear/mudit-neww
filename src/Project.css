@@ -1,0 +1,125 @@
+/* Main container */
+.projects {
+  padding: 60px 20px;
+  background-color: #0d0d0d;
+  color: #fff;
+  text-align: center;
+}
+
+/* Header styling */
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.projects h2 span {
+  color: #fbc02d;
+}
+
+/* Grid layout for project cards */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual project card styling */
+.project-card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  /* Popup animation */
+  opacity: 0;
+  transform: scale(0.8);
+  animation: popup 0.5s ease-out forwards;
+}
+
+/* Delay each card for cascading effect */
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+.project-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Hover effect */
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Video wrapper for responsive iframe */
+.video-wrapper {
+  position: relative;
+
+
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Project link styling */
+.project-link {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #fbc02d;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #ffeb3b;
+}
+
+/* Role title styling */
+.project-card h4 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #fbc02d;
+}
+
+/* Description styling */
+.project-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Popup animation */
+@keyframes popup {
+  0% {
+      opacity: 0;
+      transform: scale(0.8);
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .projects {
+      padding: 40px 10px;
+  }
+  .projects h2 {
+      font-size: 2rem;
+  }
+}

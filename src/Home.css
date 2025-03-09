@@ -1,0 +1,125 @@
+/* Container Styling */
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 70px 200px;
+  background: #000;
+  color: #fff;
+  min-height: 80vh;
+
+
+}
+
+/* Left Section (Text & Social Links) */
+.hero-bluetext {
+  flex: 1;
+  max-width: 600px;
+  text-align: left;  /* Changed from center to left for better readability */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.hero-bluetext h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-bluetext h1 small {
+  display: block;
+  font-size: 1.2rem;
+  color: #ffeb3b;
+  margin-bottom: 10px;
+}
+
+.hero-bluetext p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: justify;  /* Ensures proper paragraph alignment */
+  margin-bottom: 70px;
+}
+
+/* Call-to-Action Placeholder */
+.call-to-action {
+  margin-bottom: 30px;
+}
+
+/* Social Links */
+.social-link {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;  /* Align social links to the left */
+}
+
+.social-link a img {
+  transition: transform 0.3s ease;
+}
+
+.social-link a:hover img {
+  transform: scale(1.1);
+}
+
+/* Right Section (Image) */
+.hero-yellow {
+  flex-shrink: 0;
+  width: 350px;  /* Adjusted for better proportion */
+  max-width: 100%;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.hero-yellow img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  padding-right: 10px;
+}
+
+.hero-yellow img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+  .hero-container {
+    flex-direction: column;
+    padding: 40px;
+    text-align:center;
+  }
+
+  .hero-bluetext {
+    text-align: center;
+  }
+
+  .hero-bluetext p {
+    text-align: center; /* Center text on smaller screens */
+  }
+
+  .social-link {
+    justify-content: center;
+  }
+
+  .hero-yellow {
+    width: 80%;
+    margin-top: 20px;
+  }
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
