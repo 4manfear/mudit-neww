@@ -6,6 +6,7 @@ import VoiceCommanding from './voicecommand';
 import FlappyGhokuGame from './flappyghokugame';
 import VrSurvivalmecha from './vrsurvial';
 import Choiceofdeckgame from './choiceofdeckgame';
+import PopduleGame from './POPDULE';
 
 function Projects() {
   return (
@@ -198,7 +199,39 @@ function Projects() {
             More Info
           </Link>
         </div>
-
+        <div className="project-card">
+          <div className="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/lJLVjgqbQDA"
+              title="Pop dule Game"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              allowFullScreen
+              style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+            ></iframe>
+          </div>
+          <a
+            className="project-link"
+            href="https://github.com/Shakedev96/GGJ_BubbleYs.git"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub Page
+          </a>
+          <h4>Role - Developer</h4>
+          <p>
+          A fast-paced local multiplayer arena game for 2–4 
+          players, created during a game jam on the theme 
+          “Bubble.” Players battle using four unique bubble 
+          bullets—Normal, Stun, Ice, and Rocket—each with 
+          distinct effects. With chaotic mechanics and two 
+          dynamic levels, Pop Duel delivers competitive fun 
+          and strategic mayhem.
+          </p>
+          <Link to="/POPDULE " className="project-link">
+            More Info
+          </Link>
+        </div>
 
 
 

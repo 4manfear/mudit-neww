@@ -10,6 +10,7 @@ import VoiceCommanding from './voicecommand';
 import FlappyGhokuGame from './flappyghokugame';
 import VrSurvivalmecha from './vrsurvial';
 import Choiceofdeckgame from './choiceofdeckgame';
+import PopduleGame from './POPDULE';
 import './app2.css';
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
             <Route path="/vrsurvial" element={<VrSurvivalmecha />} />
             <Route path="/flappyghokugame" element={<FlappyGhokuGame />} />
             <Route path="/choiceofdeckgame" element={<Choiceofdeckgame />} />
+            <Route path="/POPDULE" element={<PopduleGame />} />
           </Routes>
     
       </div>
