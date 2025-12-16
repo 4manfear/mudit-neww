@@ -11,6 +11,7 @@ import FlappyGhokuGame from './flappyghokugame';
 import VrSurvivalmecha from './vrsurvial';
 import Choiceofdeckgame from './choiceofdeckgame';
 import PopduleGame from './POPDULE';
+import ReGein_game from './ReGein';
 import './app2.css';
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
             <Route path="/flappyghokugame" element={<FlappyGhokuGame />} />
             <Route path="/choiceofdeckgame" element={<Choiceofdeckgame />} />
             <Route path="/POPDULE" element={<PopduleGame />} />
+            <Route path="/ReGein" element={<ReGein_game />} />
           </Routes>
     
       </div>
